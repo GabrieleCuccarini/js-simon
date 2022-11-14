@@ -16,7 +16,7 @@ for (let i = 0; i < 5; i++) {
 // TIMER (Variabili e funzione)
 let timeLeft = 30;
 const timer = document.querySelector(".timer")
-let timerId = setInterval(countdown, 500);
+let timerId = setInterval(countdown, 1000);
 
 function countdown() {
     if (timeLeft == 0) {
@@ -56,7 +56,8 @@ console.log(randomNumbersList, listUserNumbers)
 
 // DISPLAY MESSAGGIO FINALE
 function messaggio() {
-    if (matchingNumbers.length = 5 ) {
+    console.log(matchingNumbers)
+    if (matchingNumbers.length > 4 ) {
         alert("Bravo, hai trovato tutti i numeri corrispondenti: " + matchingNumbers )
     } else if (matchingNumbers.length > 0) {
         alert("Bravo, hai trovato " + matchingNumbers.length + " numero/i corrispondente/i: " + matchingNumbers )
