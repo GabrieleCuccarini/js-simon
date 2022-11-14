@@ -14,7 +14,7 @@ for (let i = 0; i < 5; i++) {
 
 
 // TIMER (Variabili e funzione)
-let timeLeft = 3;
+let timeLeft = 30;
 const timer = document.querySelector(".timer")
 let timerId = setInterval(countdown, 500);
 
