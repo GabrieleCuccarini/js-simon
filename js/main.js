@@ -18,7 +18,7 @@ let timeLeft = 30;
 const timer = document.querySelector(".timer")
 let timerId = setInterval(countdown, 1000);
 
-function countdown() {
+function countdown () {
     if (timeLeft == 0) {
         listaRandomEl.innerHTML = ""
         timer.innerHTML = ""
@@ -35,14 +35,11 @@ function countdown() {
 
 // PROMPTS NUOVI NUMERI E PUSH NELLA NUOVA LISTA
 function prompts() {
-    const numUser1 = prompt("Inserisci un numero che ti ricordi")
-    const numUser2 = prompt("Inserisci un numero che ti ricordi")
-    const numUser3 = prompt("Inserisci un numero che ti ricordi")
-    const numUser4 = prompt("Inserisci un numero che ti ricordi")
-    const numUser5 = prompt("Inserisci un numero che ti ricordi")
-    listUserNumbers.push(numUser1, numUser2, numUser3, numUser4, numUser5)
-    console.log(listUserNumbers)
-
+    for (let i = 0; i < 5; i++) {
+        const numUser = prompt("Inserisci un numero che ti ricordi")
+        listUserNumbers.push(numUser)
+    }
+    console.log(listUserNumbers)   
     for (let x = 0; x < 5; x++) {
         if (listUserNumbers.includes(randomNumbersList[x]) ) {
             matchingNumbers.push(randomNumbersList[x])
